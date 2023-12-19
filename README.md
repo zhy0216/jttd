@@ -7,29 +7,37 @@ The idea is to represent typescript's type information in json format. With this
 * ORM
 * api client generation
 
+## spec
+see the type.ts
+
 
 ## TODO:
-- [] primitive type (0.1)
-  - [] null | undefined
-  - [] number | bigint
-  - [] boolean
-  - [] string | symbol
-  - [] enum
-  - [] literal
-- [] objects
-    - [] date?
-    - [] array (0.1)
-    - [] object (0.1)
-    - [] class?
-- [] type operator
-    - [] generics (no?)
-    - [] keyof
-    - [] typeof (no)
-    - [] index access
-    - [] condition type
-    - [] mapped type
-    - [] template literal
-    - [] infer (no?)
+- [ ] primitive type (0.1)
+  - [ ] null | undefined
+  - [ ] number | bigint
+  - [ ] boolean
+  - [ ] string | symbol
+  - [ ] enum
+  - [ ] literal
+- [ ] objects
+    - [ ] date?
+    - [ ] array (0.1)
+    - [ ] object (0.1)
+    - [ ] class?
+- [ ] type operator
+    - [ ] union
+    - [ ] intersection
+    - [ ] ?: optional property
+    - [ ] readonly
+    - [ ] keyof
+    - [ ] typeof (no)
+    - [ ] index access
+    - [ ] condition type
+    - [ ] mapped type
+    - [ ] template literal
+    - [ ] generics (no?)
+    - [ ] infer (no?)
+
 
 ## Acknowledge
 * https://jsontypedef.com/
