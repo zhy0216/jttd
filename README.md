@@ -24,7 +24,7 @@ see the type.ts
     - [ ] array (0.1)
     - [ ] object (0.1)
     - [ ] class?
-- [ ] type operator
+- [ ] type operator (all the operator in definition will start with $)
     - [ ] union
     - [ ] intersection
     - [ ] ?: optional property
