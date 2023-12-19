@@ -1,9 +1,5 @@
-
-
 export enum TypeFlag {
-  primitive = 1 << 30
-
-
+  primitive = 1 << 30,
 }
 
 export enum Type {
@@ -12,19 +8,15 @@ export enum Type {
 }
 
 export interface Schema {
-  $name?: string // can be used for refer
-  $refer?: string
-  type: Type
+  $name?: string; // can be used for refer
+  $refer?: string;
+  type: Type;
 }
 
 interface Null extends Schema {
-  type: Type.null
+  type: Type.null;
 }
-
 
 interface Undefined extends Schema {
-  type: Type.undefined
+  type: Type.undefined;
 }
-
-
-

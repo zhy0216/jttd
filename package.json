@@ -2,8 +2,19 @@
   "name": "jttd",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "lint": "oxlint",
+    "prepare": "husky install"
+  },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "oxlint": "latest",
+    "prettier": "^3.1.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
