@@ -1,0 +1,7 @@
+// Bun Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`null codegen 1`] = `
+{
+  "sourceCode": "type nullType = null",
+}
+`;

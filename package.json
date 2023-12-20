@@ -3,6 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
+    "test": "bun test",
+    "test:update": "bun test --update-snapshots",
     "lint": "oxlint",
     "prepare": "husky install"
   },

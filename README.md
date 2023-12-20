@@ -26,6 +26,7 @@ see the type.ts
   - [ ] date?
   - [ ] array (0.1)
   - [ ] object (0.1)
+  - [ ] function
   - [ ] class?
 - [ ] type operator (all the operator in definition will start with $)
   - [ ] union
