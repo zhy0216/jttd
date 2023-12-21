@@ -1,7 +1,9 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`null codegen 1`] = `
-{
-  "sourceCode": "type nullType = null",
-}
-`;
+exports[`null.ts 1`] = `undefined`;
+
+exports[`null.ts 2`] = `undefined`;
+
+exports[`null222.ts 1`] = `undefined`;
+
+exports[`null222.ts 2`] = `undefined`;

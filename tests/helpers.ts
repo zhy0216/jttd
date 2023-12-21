@@ -1,7 +1,7 @@
-import { Schema } from "types.ts";
+import { Schema } from "~/types";
 import path from "path";
 import fs from "fs";
-import { codegen } from "codegen.ts";
+import { codegen } from "~/codegen";
 
 export const genFromFixture = (name: string): Schema => {
   const projectRoot = import.meta.dir.split(path.sep).slice(0, -1);
@@ -11,5 +11,5 @@ export const genFromFixture = (name: string): Schema => {
     flag: "r",
   });
 
-  return codegen(sourceCode);
+  return eval(codegen(sourceCode))[0];
 };

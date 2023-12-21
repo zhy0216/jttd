@@ -1,5 +1,4 @@
 import * as ts from "typescript";
-import { Schema } from "./types.ts";
 
 export const transpile = (sourceCode: string): ts.Program => {
   const sourceFile = ts.createSourceFile(
@@ -29,8 +28,15 @@ export const transpile = (sourceCode: string): ts.Program => {
   return ts.createProgram(["source.ts"], { noLib: true }, compilerHost);
 };
 
-export const codegen = (sourceCode: string): Schema => {
+export const codegen = (sourceCode: string): string => {
   const program = transpile(sourceCode);
   const checker = program.getTypeChecker();
-  return { sourceCode } as any as Schema;
+
+  program
+    .getSourceFiles()
+    .flatMap((s) => s.statements)
+    .filter((s) => s.kind === ts.SyntaxKind.TypeAliasDeclaration)
+    .map((s) => {});
+
+  return "";
 };
