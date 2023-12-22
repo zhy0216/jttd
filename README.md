@@ -26,17 +26,17 @@ see the type.ts
   - [ ] date?
   - [ ] array (0.1)
   - [ ] object (0.1)
-  - [ ] function
+  - [ ] function (0.1)
   - [ ] class?
 - [ ] type operator (all the operator in definition will start with $)
-  - [ ] union
-  - [ ] intersection
+  - [ ] union (0.1)
+  - [ ] intersection (0.1)
   - [ ] ?: optional property
   - [ ] readonly
   - [ ] keyof
   - [ ] typeof (no)
   - [ ] index access
-  - [ ] condition type
+  - [ ] condition type (no?)
   - [ ] mapped type
   - [ ] template literal
   - [ ] generics (no?)

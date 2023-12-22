@@ -36,7 +36,12 @@ export const codegen = (sourceCode: string): string => {
     .getSourceFiles()
     .flatMap((s) => s.statements)
     .filter((s) => s.kind === ts.SyntaxKind.TypeAliasDeclaration)
-    .map((s) => {});
+    .map((s) => {
+      const typeAlias = s as ts.TypeAliasDeclaration;
+
+      typeAlias.name.getText();
+      typeAlias.type.kind === ts.SyntaxKind.LiteralType;
+    });
 
   return "";
 };
