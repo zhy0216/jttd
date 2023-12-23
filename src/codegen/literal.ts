@@ -8,6 +8,6 @@ export class LiteralEmitter extends NodeEmitter<ts.LiteralTypeNode> {
       return { type: Type.null };
     }
 
-    throw new Error(`LiteralEmitter: wrong type: ${this.node}`);
+    throw new Error(`LiteralEmitter: wrong type: ${this.node.literal.kind}`);
   };
 }

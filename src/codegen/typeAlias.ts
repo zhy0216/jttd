@@ -7,6 +7,10 @@ export class TypeAliasEmitter extends NodeEmitter<ts.TypeAliasDeclaration> {
   emit = () => {
     const name = this.node.name.getText();
 
+    if (this.node.type.kind === ts.SyntaxKind.UndefinedKeyword) {
+      return { type: Type.undefined, $name: name };
+    }
+
     if (this.node.type.kind === ts.SyntaxKind.LiteralType) {
       const schema = new LiteralEmitter({
         node: this.node.type as ts.LiteralTypeNode,

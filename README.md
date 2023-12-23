@@ -15,32 +15,34 @@ see the type.ts
 
 ## TODO:
 
-- [ ] primitive type (0.1)
-  - [ ] null | undefined
-  - [ ] number | bigint
-  - [ ] boolean
-  - [ ] string | symbol
-  - [ ] enum
-  - [ ] literal
-- [ ] objects
-  - [ ] date?
-  - [ ] array (0.1)
-  - [ ] object (0.1)
-  - [ ] function (0.1)
-  - [ ] class?
-- [ ] type operator (all the operator in definition will start with $)
-  - [ ] union (0.1)
-  - [ ] intersection (0.1)
-  - [ ] ?: optional property
-  - [ ] readonly
-  - [ ] keyof
-  - [ ] typeof (no)
-  - [ ] index access
-  - [ ] condition type (no?)
-  - [ ] mapped type
-  - [ ] template literal
-  - [ ] generics (no?)
-  - [ ] infer (no?)
+| feature                                                              | type -> json | validation |
+| -------------------------------------------------------------------- | ------------ | ---------- |
+| **primitive type (0.1)**                                             |              |            |
+| null or undefined                                                    | ✅           |            |
+| number or bigint                                                     |              |            |
+| boolean                                                              |              |            |
+| string or symbol                                                     |              |            |
+| enum                                                                 |              |            |
+| literal                                                              |              |            |
+| **objects**                                                          |              |            |
+| date?                                                                |              |            |
+| array (0.1)                                                          |              |            |
+| object (0.1)                                                         |              |            |
+| function (0.1)                                                       |              |            |
+| class?                                                               |              |            |
+| **type operator** (all the operator in definition will start with $) |              |            |
+| union (0.1)                                                          |              |            |
+| intersection (0.1)                                                   |              |            |
+| ?: optional property                                                 |              |            |
+| readonly                                                             |              |            |
+| keyof                                                                |              |            |
+| typeof                                                               |              |            |
+| index access                                                         |              |            |
+| condition type                                                       |              |            |
+| mapped type                                                          |              |            |
+| template literal                                                     |              |            |
+| generics                                                             |              |            |
+| infer                                                                |              |            |
 
 ## Acknowledge
 
