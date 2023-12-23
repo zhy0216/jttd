@@ -10,7 +10,8 @@ export const validate = <T>(schema: Schema, obj: any): obj is T => {
       return obj === null;
     case Type.undefined:
       return obj === undefined;
-
+    case Type.number:
+      return typeof obj == "number";
     default:
       const exhaustiveCheck: never = schema.type;
       throw new Error(`Unhandled color case: ${exhaustiveCheck}`);
