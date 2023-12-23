@@ -7,6 +7,13 @@ exports[`codegen undefined.ts 1`] = `
 }
 `;
 
+exports[`codegen number.ts 1`] = `
+{
+  "$name": "numberType",
+  "type": 1073741826,
+}
+`;
+
 exports[`codegen null.ts 1`] = `
 {
   "$name": "nullType",

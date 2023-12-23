@@ -5,6 +5,7 @@ export enum TypeFlag {
 export enum Type {
   undefined = TypeFlag.primitive | 0,
   null = TypeFlag.primitive | 1,
+  number = TypeFlag.primitive | 2,
 }
 
 export interface Schema {
@@ -19,4 +20,8 @@ interface NullSchema extends Schema {
 
 interface UndefinedSchema extends Schema {
   type: Type.undefined;
+}
+
+interface NumberSchema extends Schema {
+  type: Type.number;
 }
