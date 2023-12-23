@@ -16,7 +16,10 @@
     "prettier": "^3.1.1"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": [
+      "prettier --write --ignore-unknown",
+      "npm run lint"
+    ]
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

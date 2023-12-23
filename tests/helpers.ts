@@ -11,5 +11,5 @@ export const genFromFixture = (name: string): Schema => {
     flag: "r",
   });
 
-  return eval(codegen(sourceCode))[0];
+  return codegen(sourceCode)[0];
 };

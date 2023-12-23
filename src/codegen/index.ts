@@ -1,4 +1,6 @@
 import * as ts from "typescript";
+import { Schema } from "~/types.ts";
+import { TypeAliasEmitter } from "~/codegen/typeAlias.ts";
 
 export const transpile = (sourceCode: string): ts.Program => {
   const sourceFile = ts.createSourceFile(
@@ -28,20 +30,16 @@ export const transpile = (sourceCode: string): ts.Program => {
   return ts.createProgram(["source.ts"], { noLib: true }, compilerHost);
 };
 
-export const codegen = (sourceCode: string): string => {
+export const codegen = (sourceCode: string): Schema[] => {
   const program = transpile(sourceCode);
   const checker = program.getTypeChecker();
 
-  program
+  return program
     .getSourceFiles()
     .flatMap((s) => s.statements)
     .filter((s) => s.kind === ts.SyntaxKind.TypeAliasDeclaration)
     .map((s) => {
-      const typeAlias = s as ts.TypeAliasDeclaration;
-
-      typeAlias.name.getText();
-      typeAlias.type.kind === ts.SyntaxKind.LiteralType;
+      const node = s as ts.TypeAliasDeclaration;
+      return new TypeAliasEmitter({ checker, node }).emit();
     });
-
-  return "";
 };
