@@ -1,13 +1,13 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`undefined.ts 1`] = `
+exports[`codegen undefined.ts 1`] = `
 {
   "$name": "undefinedType",
   "type": 1073741824,
 }
 `;
 
-exports[`null.ts 1`] = `
+exports[`codegen null.ts 1`] = `
 {
   "$name": "nullType",
   "type": 1073741825,

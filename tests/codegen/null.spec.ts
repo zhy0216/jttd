@@ -7,7 +7,7 @@ const projectRoot = import.meta.dir.split(path.sep).slice(0, -2);
 const fixturePath = [...projectRoot, "fixtures"].join(path.sep);
 
 fs.readdirSync(fixturePath).forEach((fileName) => {
-  test(fileName, () => {
+  test("codegen " + fileName, () => {
     expect(genFromFixture(fileName)).toMatchSnapshot();
   });
 });

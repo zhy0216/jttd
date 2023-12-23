@@ -18,7 +18,7 @@ see the type.ts
 | feature                                                              | type -> json | validation |
 | -------------------------------------------------------------------- | ------------ | ---------- |
 | **primitive type (0.1)**                                             |              |            |
-| null or undefined                                                    | ✅           |            |
+| null or undefined                                                    | ✅           | ✅         |
 | number or bigint                                                     |              |            |
 | boolean                                                              |              |            |
 | string or symbol                                                     |              |            |

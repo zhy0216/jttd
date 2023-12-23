@@ -13,10 +13,10 @@ export interface Schema {
   type: Type;
 }
 
-interface Null extends Schema {
+interface NullSchema extends Schema {
   type: Type.null;
 }
 
-interface Undefined extends Schema {
+interface UndefinedSchema extends Schema {
   type: Type.undefined;
 }
