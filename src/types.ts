@@ -6,6 +6,7 @@ export enum Type {
   undefined = TypeFlag.primitive | 0,
   null = TypeFlag.primitive | 1,
   number = TypeFlag.primitive | 2,
+  boolean = TypeFlag.primitive | 3,
 }
 
 export interface Schema {

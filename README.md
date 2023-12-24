@@ -19,8 +19,8 @@ see the type.ts
 | -------------------------------------------------------------------- | ------------ | ---------- |
 | **primitive type (0.1)**                                             |              |            |
 | null or undefined                                                    | ✅           | ✅         |
-| number                                                               |              |            |
-| boolean                                                              |              |            |
+| number                                                               | ✅           | ✅         |
+| boolean                                                              | ✅           | ✅         |
 | string or symbol                                                     |              |            |
 | enum                                                                 |              |            |
 | literal                                                              |              |            |
