@@ -3,10 +3,14 @@ export enum TypeFlag {
 }
 
 export enum Type {
+  //
   undefined = TypeFlag.primitive | 0,
   null = TypeFlag.primitive | 1,
   number = TypeFlag.primitive | 2,
   boolean = TypeFlag.primitive | 3,
+
+  //
+  array = 5,
 }
 
 export interface Schema {
@@ -25,4 +29,9 @@ interface UndefinedSchema extends Schema {
 
 interface NumberSchema extends Schema {
   type: Type.number;
+}
+
+interface ArraySchema extends Schema {
+  type: Type.array;
+  elementType: Schema;
 }
