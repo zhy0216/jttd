@@ -101,3 +101,18 @@ exports[`codegen null.ts 1`] = `
   "type": 1073741825,
 }
 `;
+
+exports[`codegen object.ts 1`] = `
+{
+  "$name": "objectType",
+  "members": {
+    "a": {
+      "type": 1073741826,
+    },
+    "b": {
+      "type": 1073741827,
+    },
+  },
+  "type": 6,
+}
+`;

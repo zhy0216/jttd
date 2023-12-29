@@ -26,7 +26,7 @@ see the type.ts
 | literal                                                              |              |            |
 | **objects**                                                          |              |            |
 | date?                                                                |              |            |
-| array (0.1)                                                          |              |            |
+| array (0.1)                                                          | ✅           | ✅         |
 | tuple (0.1)                                                          |              |            |
 | object (0.1)                                                         |              |            |
 | function (0.1)                                                       |              |            |

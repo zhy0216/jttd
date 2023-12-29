@@ -11,6 +11,7 @@ export enum Type {
 
   //
   array = 5,
+  object = 6,
 }
 
 export interface ISchema {
@@ -40,9 +41,15 @@ export interface ArraySchema extends ISchema {
   elementType: Schema;
 }
 
+export interface ObjectSchema extends ISchema {
+  type: Type.object;
+  members: Record<string, Schema>;
+}
+
 export type Schema =
   | NullSchema
   | UndefinedSchema
   | BooleanSchema
   | NumberSchema
-  | ArraySchema;
+  | ArraySchema
+  | ObjectSchema;

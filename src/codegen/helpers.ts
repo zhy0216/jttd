@@ -37,5 +37,25 @@ export const getSchemaByTypeNode = (
     return { type: Type.array, elementType: schema };
   }
 
+  if (typeKind === ts.SyntaxKind.TypeLiteral) {
+    const members: Record<string, Schema> = {};
+
+    for (const propertySig of (typeNode as ts.TypeLiteralNode).members) {
+      if (ts.isPropertySignature(propertySig)) {
+        if (
+          propertySig.name?.kind === ts.SyntaxKind.Identifier &&
+          propertySig.type
+        ) {
+          members[propertySig.name.getText()] = getSchemaByTypeNode(
+            propertySig.type,
+            option,
+          );
+        }
+      }
+    }
+
+    return { type: Type.object, members };
+  }
+
   throw new Error(`wrong Node: ${typeKind}`);
 };
