@@ -13,25 +13,31 @@ export enum Type {
   array = 5,
 }
 
-export interface Schema {
+export interface ISchema {
   $name?: string; // can be used for refer
   $refer?: string;
   type: Type;
 }
 
-interface NullSchema extends Schema {
+interface NullSchema extends ISchema {
   type: Type.null;
 }
 
-interface UndefinedSchema extends Schema {
+interface UndefinedSchema extends ISchema {
   type: Type.undefined;
 }
 
-interface NumberSchema extends Schema {
+interface BooleanSchema extends ISchema {
+  type: Type.boolean;
+}
+
+interface NumberSchema extends ISchema {
   type: Type.number;
 }
 
-interface ArraySchema extends Schema {
+interface ArraySchema extends ISchema {
   type: Type.array;
-  elementType: Schema;
+  elementType: ISchema;
 }
+
+export type Schema = NullSchema | UndefinedSchema | NumberSchema | ArraySchema;
