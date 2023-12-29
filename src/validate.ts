@@ -6,6 +6,8 @@ import { Schema, Type } from "./types";
  */
 export const validate = <T>(schema: Schema, obj: any): obj is T => {
   switch (schema.type) {
+    case Type.array:
+      return false; // TODO
     case Type.null:
       return obj === null;
     case Type.undefined:
@@ -15,7 +17,7 @@ export const validate = <T>(schema: Schema, obj: any): obj is T => {
     case Type.boolean:
       return obj === true || obj === false;
     default:
-      const exhaustiveCheck: never = schema.type;
+      const exhaustiveCheck: never = schema;
       throw new Error(`Unhandled color case: ${exhaustiveCheck}`);
   }
 };

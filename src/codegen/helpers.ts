@@ -25,7 +25,7 @@ export const getSchemaByTypeNode = (
       checker: option.checker,
     }).emit();
 
-    return { ...schema };
+    return { ...schema } as Schema;
   }
 
   if (typeKind === ts.SyntaxKind.ArrayType) {

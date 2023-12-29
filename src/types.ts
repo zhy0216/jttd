@@ -19,15 +19,15 @@ export interface ISchema {
   type: Type;
 }
 
-interface NullSchema extends ISchema {
+export interface NullSchema extends ISchema {
   type: Type.null;
 }
 
-interface UndefinedSchema extends ISchema {
+export interface UndefinedSchema extends ISchema {
   type: Type.undefined;
 }
 
-interface BooleanSchema extends ISchema {
+export interface BooleanSchema extends ISchema {
   type: Type.boolean;
 }
 
@@ -40,4 +40,9 @@ interface ArraySchema extends ISchema {
   elementType: ISchema;
 }
 
-export type Schema = NullSchema | UndefinedSchema | NumberSchema | ArraySchema;
+export type Schema =
+  | NullSchema
+  | UndefinedSchema
+  | BooleanSchema
+  | NumberSchema
+  | ArraySchema;
