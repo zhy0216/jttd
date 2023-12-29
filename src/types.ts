@@ -31,13 +31,13 @@ export interface BooleanSchema extends ISchema {
   type: Type.boolean;
 }
 
-interface NumberSchema extends ISchema {
+export interface NumberSchema extends ISchema {
   type: Type.number;
 }
 
-interface ArraySchema extends ISchema {
+export interface ArraySchema extends ISchema {
   type: Type.array;
-  elementType: ISchema;
+  elementType: Schema;
 }
 
 export type Schema =

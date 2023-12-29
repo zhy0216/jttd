@@ -1,4 +1,4 @@
-import { Schema, Type } from "./types";
+import { ArraySchema, Schema, Type } from "./types";
 
 /**
  * use jttd schema to validate object
@@ -7,7 +7,13 @@ import { Schema, Type } from "./types";
 export const validate = <T>(schema: Schema, obj: any): obj is T => {
   switch (schema.type) {
     case Type.array:
-      return false; // TODO
+      if (Array.isArray(obj)) {
+        return obj.every((o) =>
+          validate((schema as ArraySchema).elementType, o),
+        );
+      }
+
+      return false;
     case Type.null:
       return obj === null;
     case Type.undefined:
@@ -18,6 +24,6 @@ export const validate = <T>(schema: Schema, obj: any): obj is T => {
       return obj === true || obj === false;
     default:
       const exhaustiveCheck: never = schema;
-      throw new Error(`Unhandled color case: ${exhaustiveCheck}`);
+      throw new Error(`Unhandled case: ${exhaustiveCheck}`);
   }
 };
