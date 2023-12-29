@@ -1,5 +1,66 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`codegen array1.ts pass 1`] = `
+{
+  "$name": "array",
+  "elementType": {
+    "type": 1073741826,
+  },
+  "type": 5,
+}
+`;
+
+exports[`codegen undefined.ts pass 1`] = `
+{
+  "$name": "undefinedType",
+  "type": 1073741824,
+}
+`;
+
+exports[`codegen boolean.ts pass 1`] = `
+{
+  "$name": "booleanType",
+  "type": 1073741827,
+}
+`;
+
+exports[`codegen array2.ts pass 1`] = `
+{
+  "$name": "array",
+  "elementType": {
+    "elementType": {
+      "type": 1073741826,
+    },
+    "type": 5,
+  },
+  "type": 5,
+}
+`;
+
+exports[`codegen number.ts pass 1`] = `
+{
+  "$name": "numberType",
+  "type": 1073741826,
+}
+`;
+
+exports[`codegen null.ts pass 1`] = `
+{
+  "$name": "nullType",
+  "type": 1073741825,
+}
+`;
+
+exports[`codegen array1.ts 1`] = `
+{
+  "$name": "array",
+  "elementType": {
+    "type": 1073741826,
+  },
+  "type": 5,
+}
+`;
+
 exports[`codegen undefined.ts 1`] = `
 {
   "$name": "undefinedType",
@@ -11,6 +72,19 @@ exports[`codegen boolean.ts 1`] = `
 {
   "$name": "booleanType",
   "type": 1073741827,
+}
+`;
+
+exports[`codegen array2.ts 1`] = `
+{
+  "$name": "array",
+  "elementType": {
+    "elementType": {
+      "type": 1073741826,
+    },
+    "type": 5,
+  },
+  "type": 5,
 }
 `;
 
