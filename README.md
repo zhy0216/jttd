@@ -21,7 +21,7 @@ see the type.ts
 | null or undefined        | ✅           | ✅         |
 | number                   | ✅           | ✅         |
 | boolean                  | ✅           | ✅         |
-| string                   |              |            |
+| string                   | ✅           | ✅         |
 | enum                     |              |            |
 | literal                  |              |            |
 | **objects**              |              |            |

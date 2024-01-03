@@ -116,3 +116,10 @@ exports[`codegen object.ts 1`] = `
   "type": 6,
 }
 `;
+
+exports[`codegen string.ts 1`] = `
+{
+  "$name": "stringType",
+  "type": 1073741828,
+}
+`;

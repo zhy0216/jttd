@@ -28,6 +28,8 @@ export const validate = <T>(schema: Schema, obj: any): obj is T => {
       return typeof obj == "number";
     case Type.boolean:
       return obj === true || obj === false;
+    case Type.string:
+      return typeof obj === "string";
     default:
       const exhaustiveCheck: never = schema;
       throw new Error(`Unhandled case: ${exhaustiveCheck}`);

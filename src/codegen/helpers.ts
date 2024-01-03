@@ -19,6 +19,10 @@ export const getSchemaByTypeNode = (
     return { type: Type.boolean };
   }
 
+  if (typeKind === ts.SyntaxKind.StringKeyword) {
+    return { type: Type.string };
+  }
+
   if (typeKind === ts.SyntaxKind.LiteralType) {
     const schema = new LiteralEmitter({
       node: typeNode as ts.LiteralTypeNode,

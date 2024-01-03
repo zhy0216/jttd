@@ -8,6 +8,7 @@ export enum Type {
   null = TypeFlag.primitive | 1,
   number = TypeFlag.primitive | 2,
   boolean = TypeFlag.primitive | 3,
+  string = TypeFlag.primitive | 4,
 
   //
   array = 5,
@@ -32,6 +33,10 @@ export interface BooleanSchema extends ISchema {
   type: Type.boolean;
 }
 
+export interface StringSchema extends ISchema {
+  type: Type.string;
+}
+
 export interface NumberSchema extends ISchema {
   type: Type.number;
 }
@@ -50,6 +55,7 @@ export type Schema =
   | NullSchema
   | UndefinedSchema
   | BooleanSchema
+  | StringSchema
   | NumberSchema
   | ArraySchema
   | ObjectSchema;
