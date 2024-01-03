@@ -29,7 +29,8 @@ see the type.ts
 | array (0.1)              | ✅           | ✅         |
 | tuple (0.1)              |              |            |
 | object (0.1)             | ✅           | ✅         |
-| function (0.1)           |              |            |
+| function                 |              |            |
+| interface (0.1)          |              |            |
 | class?                   |              |            |
 | **type operator** ()     |              |            |
 | union (0.1)              | ✅           | ✅         |
