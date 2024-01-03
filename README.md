@@ -32,7 +32,7 @@ see the type.ts
 | function (0.1)           |              |            |
 | class?                   |              |            |
 | **type operator** ()     |              |            |
-| union (0.1)              |              |            |
+| union (0.1)              | ✅           | ✅         |
 | intersection (0.1)       |              |            |
 | ?: optional property     |              |            |
 | readonly                 |              |            |
