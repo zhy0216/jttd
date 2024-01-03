@@ -1,0 +1,1 @@
+type union = number | boolean;

@@ -1,5 +1,6 @@
 export enum TypeFlag {
   primitive = 1 << 30,
+  operator = 1 << 29,
 }
 
 export enum Type {
@@ -13,6 +14,10 @@ export enum Type {
   //
   array = 5,
   object = 6,
+
+  //
+
+  union = TypeFlag.operator | 0,
 }
 
 export interface ISchema {
@@ -51,6 +56,11 @@ export interface ObjectSchema extends ISchema {
   members: Record<string, Schema>;
 }
 
+export interface UnionSchema extends ISchema {
+  type: Type.union;
+  members: Schema[];
+}
+
 export type Schema =
   | NullSchema
   | UndefinedSchema
@@ -58,4 +68,5 @@ export type Schema =
   | StringSchema
   | NumberSchema
   | ArraySchema
-  | ObjectSchema;
+  | ObjectSchema
+  | UnionSchema;

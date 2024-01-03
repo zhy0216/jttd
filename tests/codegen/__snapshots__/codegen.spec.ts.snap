@@ -123,3 +123,36 @@ exports[`codegen string.ts 1`] = `
   "type": 1073741828,
 }
 `;
+
+exports[`codegen union2.ts 1`] = `
+{
+  "$name": "union",
+  "members": [
+    {
+      "type": 1073741826,
+    },
+    {
+      "elementType": {
+        "type": 1073741827,
+      },
+      "type": 5,
+    },
+  ],
+  "type": 536870912,
+}
+`;
+
+exports[`codegen union1.ts 1`] = `
+{
+  "$name": "union",
+  "members": [
+    {
+      "type": 1073741826,
+    },
+    {
+      "type": 1073741827,
+    },
+  ],
+  "type": 536870912,
+}
+`;

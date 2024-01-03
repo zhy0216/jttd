@@ -1,5 +1,5 @@
 import ts from "typescript";
-import { Schema, Type } from "~/types.ts";
+import { Schema, Type, UnionSchema } from "~/types.ts";
 import { LiteralEmitter } from "~/codegen/literal.ts";
 
 export const getSchemaByTypeNode = (
@@ -59,6 +59,13 @@ export const getSchemaByTypeNode = (
     }
 
     return { type: Type.object, members };
+  }
+
+  if (ts.isUnionTypeNode(typeNode)) {
+    return {
+      type: Type.union,
+      members: typeNode.types.map((t) => getSchemaByTypeNode(t, option)),
+    };
   }
 
   throw new Error(`wrong Node: ${typeKind}`);
