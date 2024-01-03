@@ -1,4 +1,4 @@
-import { ArraySchema, Schema, Type } from "./types";
+import { ArraySchema, ObjectSchema, Schema, Type } from "./types";
 
 /**
  * use jttd schema to validate object
@@ -6,6 +6,12 @@ import { ArraySchema, Schema, Type } from "./types";
  */
 export const validate = <T>(schema: Schema, obj: any): obj is T => {
   switch (schema.type) {
+    case Type.object: {
+      if (obj == null) return false;
+      return Object.entries((schema as ObjectSchema).members).every(
+        ([key, s]) => validate(s, obj[key]),
+      );
+    }
     case Type.array:
       if (Array.isArray(obj)) {
         return obj.every((o) =>

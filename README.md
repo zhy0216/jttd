@@ -15,37 +15,38 @@ see the type.ts
 
 ## TODO:
 
-| feature                                                              | type -> json | validation |
-| -------------------------------------------------------------------- | ------------ | ---------- |
-| **primitive type (0.1)**                                             |              |            |
-| null or undefined                                                    | ✅           | ✅         |
-| number                                                               | ✅           | ✅         |
-| boolean                                                              | ✅           | ✅         |
-| string or symbol                                                     |              |            |
-| enum                                                                 |              |            |
-| literal                                                              |              |            |
-| **objects**                                                          |              |            |
-| date?                                                                |              |            |
-| array (0.1)                                                          | ✅           | ✅         |
-| tuple (0.1)                                                          |              |            |
-| object (0.1)                                                         |              |            |
-| function (0.1)                                                       |              |            |
-| class?                                                               |              |            |
-| **type operator** (all the operator in definition will start with $) |              |            |
-| union (0.1)                                                          |              |            |
-| intersection (0.1)                                                   |              |            |
-| ?: optional property                                                 |              |            |
-| readonly                                                             |              |            |
-| keyof                                                                |              |            |
-| typeof                                                               |              |            |
-| index access                                                         |              |            |
-| condition type                                                       |              |            |
-| mapped type                                                          |              |            |
-| template literal                                                     |              |            |
-| generics                                                             |              |            |
-| infer                                                                |              |            |
+| feature                  | type -> json | validation |
+| ------------------------ | ------------ | ---------- |
+| **primitive type (0.1)** |              |            |
+| null or undefined        | ✅           | ✅         |
+| number                   | ✅           | ✅         |
+| boolean                  | ✅           | ✅         |
+| string                   |              |            |
+| enum                     |              |            |
+| literal                  |              |            |
+| **objects**              |              |            |
+| date?                    |              |            |
+| array (0.1)              | ✅           | ✅         |
+| tuple (0.1)              |              |            |
+| object (0.1)             | ✅           | ✅         |
+| function (0.1)           |              |            |
+| class?                   |              |            |
+| **type operator** ()     |              |            |
+| union (0.1)              |              |            |
+| intersection (0.1)       |              |            |
+| ?: optional property     |              |            |
+| readonly                 |              |            |
+| keyof                    |              |            |
+| typeof                   |              |            |
+| index access             |              |            |
+| condition type           |              |            |
+| mapped type              |              |            |
+| template literal         |              |            |
+| generics                 |              |            |
+| infer                    |              |            |
 
 ## Acknowledge
 
 - https://jsontypedef.com/
 - https://github.com/deepkit/deepkit-framework
+- https://github.com/zackradisic/tyvm
