@@ -1,53 +1,43 @@
 // Bun Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`codegen array1.ts pass 1`] = `
+exports[`codegen literal4.ts 1`] = `
 {
-  "$name": "array",
-  "elementType": {
-    "type": 1073741826,
-  },
-  "type": 5,
+  "$name": "literalType",
+  "type": 1073741830,
+  "value": false,
 }
 `;
 
-exports[`codegen undefined.ts pass 1`] = `
+exports[`codegen union2.ts 1`] = `
 {
-  "$name": "undefinedType",
-  "type": 1073741824,
-}
-`;
-
-exports[`codegen boolean.ts pass 1`] = `
-{
-  "$name": "booleanType",
-  "type": 1073741827,
-}
-`;
-
-exports[`codegen array2.ts pass 1`] = `
-{
-  "$name": "array",
-  "elementType": {
-    "elementType": {
+  "$name": "union",
+  "members": [
+    {
       "type": 1073741826,
     },
-    "type": 5,
-  },
-  "type": 5,
+    {
+      "elementType": {
+        "type": 1073741827,
+      },
+      "type": 5,
+    },
+  ],
+  "type": 536870912,
 }
 `;
 
-exports[`codegen number.ts pass 1`] = `
+exports[`codegen string.ts 1`] = `
 {
-  "$name": "numberType",
-  "type": 1073741826,
+  "$name": "stringType",
+  "type": 1073741828,
 }
 `;
 
-exports[`codegen null.ts pass 1`] = `
+exports[`codegen literal1.ts 1`] = `
 {
-  "$name": "nullType",
-  "type": 1073741825,
+  "$name": "literalType",
+  "type": 1073741830,
+  "value": 1,
 }
 `;
 
@@ -117,31 +107,6 @@ exports[`codegen object.ts 1`] = `
 }
 `;
 
-exports[`codegen string.ts 1`] = `
-{
-  "$name": "stringType",
-  "type": 1073741828,
-}
-`;
-
-exports[`codegen union2.ts 1`] = `
-{
-  "$name": "union",
-  "members": [
-    {
-      "type": 1073741826,
-    },
-    {
-      "elementType": {
-        "type": 1073741827,
-      },
-      "type": 5,
-    },
-  ],
-  "type": 536870912,
-}
-`;
-
 exports[`codegen union1.ts 1`] = `
 {
   "$name": "union",
@@ -154,5 +119,21 @@ exports[`codegen union1.ts 1`] = `
     },
   ],
   "type": 536870912,
+}
+`;
+
+exports[`codegen literal2.ts 1`] = `
+{
+  "$name": "literalType",
+  "type": 1073741830,
+  "value": "2",
+}
+`;
+
+exports[`codegen literal3.ts 1`] = `
+{
+  "$name": "literalType",
+  "type": 1073741830,
+  "value": true,
 }
 `;

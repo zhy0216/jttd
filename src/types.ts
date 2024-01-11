@@ -1,5 +1,5 @@
 export enum TypeFlag {
-  primitive = 1 << 30,
+  primitive = 1 << 30, // TODO: change to lower bit
   operator = 1 << 29,
 }
 
@@ -11,6 +11,7 @@ export enum Type {
   boolean = TypeFlag.primitive | 3,
   string = TypeFlag.primitive | 4,
   enum = TypeFlag.primitive | 5,
+  literal = TypeFlag.primitive | 6,
 
   //
   array = 5,
@@ -43,10 +44,15 @@ export interface StringSchema extends ISchema {
   type: Type.string;
 }
 
+export interface LiteralSchema extends ISchema {
+  type: Type.literal;
+  value: number | string | boolean;
+}
+
 // literal first
 export interface EnumSchema extends ISchema {
   type: Type.enum;
-  members: Schema[];
+  members: LiteralSchema[];
 }
 
 export interface NumberSchema extends ISchema {
@@ -76,5 +82,9 @@ export type Schema =
   | NumberSchema
   | ArraySchema
   | ObjectSchema
-  | UnionSchema;
+  | UnionSchema
+  | LiteralSchema;
 // | EnumSchema;
+
+// Module Schema: for collection of types
+// HOS: high order schema which is generic schema?

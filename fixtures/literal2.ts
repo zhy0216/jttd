@@ -1,0 +1,1 @@
+type literalType = "2";
