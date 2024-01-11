@@ -10,6 +10,7 @@ export enum Type {
   number = TypeFlag.primitive | 2,
   boolean = TypeFlag.primitive | 3,
   string = TypeFlag.primitive | 4,
+  enum = TypeFlag.primitive | 5,
 
   //
   array = 5,
@@ -42,6 +43,12 @@ export interface StringSchema extends ISchema {
   type: Type.string;
 }
 
+// literal first
+export interface EnumSchema extends ISchema {
+  type: Type.enum;
+  members: Schema[];
+}
+
 export interface NumberSchema extends ISchema {
   type: Type.number;
 }
@@ -70,3 +77,4 @@ export type Schema =
   | ArraySchema
   | ObjectSchema
   | UnionSchema;
+// | EnumSchema;
