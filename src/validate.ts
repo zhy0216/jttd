@@ -6,6 +6,8 @@ import { ArraySchema, ObjectSchema, Schema, Type } from "./types";
  */
 export const validate = <T>(schema: Schema, obj: any): obj is T => {
   switch (schema.type) {
+    case Type.literal:
+      return schema.value === obj;
     case Type.union:
       return schema.members.some((s) => validate(s, obj));
     case Type.object: {

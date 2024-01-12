@@ -23,7 +23,7 @@ see the type.ts
 | boolean                  | ✅           | ✅         |
 | string                   | ✅           | ✅         |
 | enum                     | 🟨           | 🟨         |
-| literal                  | ✅           |            |
+| literal                  | ✅           | ✅         |
 | **objects**              |              |            |
 | date?                    | 🔜           | 🔜         |
 | array (0.1)              | ✅           | ✅         |
