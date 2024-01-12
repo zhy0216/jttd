@@ -34,7 +34,7 @@ see the type.ts
 | class?                   | 🟨           | 🟨         |
 | **type operator**        |              |            |
 | union (0.1)              | ✅           | ✅         |
-| intersection (0.1)       |              |            |
+| intersection (0.1)       | ✅           | ✅         |
 | ?: optional property     |              |            |
 | readonly                 |              |            |
 | keyof                    |              |            |

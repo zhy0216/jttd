@@ -68,5 +68,12 @@ export const getSchemaByTypeNode = (
     };
   }
 
+  if (ts.isIntersectionTypeNode(typeNode)) {
+    return {
+      type: Type.intersection,
+      members: typeNode.types.map((t) => getSchemaByTypeNode(t, option)),
+    };
+  }
+
   throw new Error(`wrong Node: ${typeKind}`);
 };

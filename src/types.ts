@@ -20,6 +20,7 @@ export enum Type {
   //
 
   union = TypeFlag.operator | 0,
+  intersection = TypeFlag.operator | 1,
 }
 
 export interface ISchema {
@@ -74,6 +75,11 @@ export interface UnionSchema extends ISchema {
   members: Schema[];
 }
 
+export interface IntersectionSchema extends ISchema {
+  type: Type.intersection;
+  members: Schema[];
+}
+
 export type Schema =
   | NullSchema
   | UndefinedSchema
@@ -83,6 +89,7 @@ export type Schema =
   | ArraySchema
   | ObjectSchema
   | UnionSchema
+  | IntersectionSchema
   | LiteralSchema;
 // | EnumSchema;
 

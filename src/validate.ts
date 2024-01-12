@@ -10,6 +10,8 @@ export const validate = <T>(schema: Schema, obj: any): obj is T => {
       return schema.value === obj;
     case Type.union:
       return schema.members.some((s) => validate(s, obj));
+    case Type.intersection:
+      return schema.members.every((s) => validate(s, obj));
     case Type.object: {
       if (obj == null) return false;
       return Object.entries((schema as ObjectSchema).members).every(

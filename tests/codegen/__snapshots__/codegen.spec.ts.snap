@@ -137,3 +137,28 @@ exports[`codegen literal3.ts 1`] = `
   "value": true,
 }
 `;
+
+exports[`codegen intersection1.ts 1`] = `
+{
+  "$name": "intersection",
+  "members": [
+    {
+      "members": {
+        "a": {
+          "type": 1073741826,
+        },
+      },
+      "type": 6,
+    },
+    {
+      "members": {
+        "b": {
+          "type": 1073741827,
+        },
+      },
+      "type": 6,
+    },
+  ],
+  "type": 536870913,
+}
+`;
