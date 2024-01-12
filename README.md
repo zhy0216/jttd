@@ -22,17 +22,17 @@ see the type.ts
 | number                   | ✅           | ✅         |
 | boolean                  | ✅           | ✅         |
 | string                   | ✅           | ✅         |
-| enum                     |              |            |
+| enum                     | 🟨           | 🟨         |
 | literal                  | ✅           |            |
 | **objects**              |              |            |
-| date?                    |              |            |
+| date?                    | 🔜           | 🔜         |
 | array (0.1)              | ✅           | ✅         |
-| tuple (0.1)              |              |            |
+| tuple (0.1)              | 🔜           | 🔜         |
 | object (0.1)             | ✅           | ✅         |
 | function                 |              |            |
 | interface (0.1)          |              |            |
-| class?                   |              |            |
-| **type operator** ()     |              |            |
+| class?                   | 🟨           | 🟨         |
+| **type operator**        |              |            |
 | union (0.1)              | ✅           | ✅         |
 | intersection (0.1)       |              |            |
 | ?: optional property     |              |            |
@@ -45,6 +45,8 @@ see the type.ts
 | template literal         |              |            |
 | generics                 |              |            |
 | infer                    |              |            |
+
+[ ] use official custom transformer plugin: https://github.com/microsoft/TypeScript/issues/54276
 
 ## Acknowledge
 
